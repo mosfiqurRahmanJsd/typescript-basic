@@ -1,3 +1,3 @@
-let myMoneyN = 50; 
-myMoneyN = 150; 
-myMoneyN = 0; 
+let age:number = 50; 
+let club:string = 'Real Madrid'; 
+const isFamous: boolean = false; 
