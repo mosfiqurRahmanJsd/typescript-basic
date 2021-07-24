@@ -120,3 +120,25 @@ const poorPlayer = {salary: 10000, age: 50};
 
 getBonus(messy, ['shuvo'])
 
+
+
+class Person {
+    name: string;
+    private _partner: string; 
+    readonly fatherName: string; 
+    constructor(name: string, father: string) {
+        this.name = name; 
+        this._partner = name; 
+        this.fatherName = father; 
+    }
+    getName(): string {
+        return this.name + '' + this._partner; 
+    }
+}
+
+const sam = new Person('Samuel', 'Devid')
+console.log('name', sam.name, sam.fatherName)
+const samName: string = sam.getName();
+
+sam.name = 'Ben'; 
+
