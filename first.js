@@ -28,9 +28,53 @@ numbers.push(22);
 var friends = ['George', 'Jeff', 'Bill', 'Abdul'];
 var megaName = '';
 for (var i = 0; i < friends.length; i++) {
-    var friend = friends[i];
-    if (friend.length > megaName.length) {
-        megaName = friend;
+    var friend_1 = friends[i];
+    if (friend_1.length > megaName.length) {
+        megaName = friend_1;
     }
 }
 console.log('Friend with the largest name', megaName);
+var player;
+player = {
+    club: 'Real Madrid',
+    salary: 450000
+};
+// object
+var friend = {
+    name: 'Samuel David',
+    age: 61
+};
+friend.age = 57;
+var messy = {
+    name: 'Messy',
+    club: 'Real Madrid',
+    salary: 4500000,
+    wife: 'Some name',
+    isPlaying: true
+};
+var ronaldo = {
+    name: 'Ronaldo',
+    club: 'Liverpool',
+    salary: 5100000,
+    isPlaying: true
+};
+function getBonus(player, friends) {
+    return player.salary * 0.1;
+}
+var poorPlayer = { salary: 10000, age: 50 };
+getBonus(messy, ['shuvo']);
+var Person = /** @class */ (function () {
+    function Person(name, father) {
+        this.name = name;
+        this._partner = name;
+        this.fatherName = father;
+    }
+    Person.prototype.getName = function () {
+        return this.name + '' + this._partner;
+    };
+    return Person;
+}());
+var sam = new Person('Samuel', 'Devid');
+console.log('name', sam.name, sam.fatherName);
+var samName = sam.getName();
+sam.name = 'Ben';
